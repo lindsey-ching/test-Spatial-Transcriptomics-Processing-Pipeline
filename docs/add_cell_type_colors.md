@@ -6,4 +6,6 @@
 Add cell type hex codes to dataset.
 
 
-### Expected AnnData structure
+### Columns Added
+
+'CDM_class_color', 'CDM_subclass_color', 'CDM_supertype_color', 'CDM_cluster_color'

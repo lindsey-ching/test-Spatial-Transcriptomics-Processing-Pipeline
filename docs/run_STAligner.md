@@ -1,5 +1,5 @@
 # Run STAligner
---
+---
 
 ### Steps
 Train STAligner subgraph. 

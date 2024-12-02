@@ -6,4 +6,6 @@
 Save results (whole dataset and section AnnData files).
 
 
-### Expected AnnData structure
+### Columns Added
+
+'final_qc_passed', 'dataset_id', 'age', 'sex'

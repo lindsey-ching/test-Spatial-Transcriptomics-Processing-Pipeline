@@ -3,7 +3,7 @@
 
 ### Steps
 
-Apply DoubleMAD average mapping correlation filtering.
+Apply DoubleMAD average mapping correlation filtering. Label outliers based on the average correlations returned from mapping.
 
 
 ### Columns Added

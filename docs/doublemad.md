@@ -5,6 +5,9 @@
 
 Apply DoubleMAD average mapping correlation filtering. Label outliers based on the average correlations returned from mapping.
 
+### Parameters 
+
+DoubleMAD threshold multiplier
 
 ### Columns Added
 

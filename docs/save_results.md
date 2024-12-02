@@ -5,6 +5,9 @@
 
 Save results (whole dataset and section AnnData files).
 
+### Parameters
+
+Dataset ID, age, sex
 
 ### Columns Added
 

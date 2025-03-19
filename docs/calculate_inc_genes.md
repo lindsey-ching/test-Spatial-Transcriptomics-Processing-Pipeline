@@ -9,3 +9,7 @@ Incongruous genes per cell is the percentage of gene pairs where 2 genes which a
 ### Columns Added
 
 'incongruous_pairs_pct', 'incongruous_genes_pct'
+
+### Input
+
+CSV with two columns: Gene1 and Gene2 (each row is a pair of incongruous genes).

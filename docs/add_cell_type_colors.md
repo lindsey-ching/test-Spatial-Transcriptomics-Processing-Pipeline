@@ -8,4 +8,4 @@ Add cell type hex codes to dataset.
 
 ### Columns Added
 
-'CDM_class_color', 'CDM_subclass_color', 'CDM_supertype_color', 'CDM_cluster_color'
+'mmc_class_color', 'mmc_subclass_color', 'mmc_supertype_color', 'mmc_cluster_color'

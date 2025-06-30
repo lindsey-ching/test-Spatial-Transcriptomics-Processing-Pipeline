@@ -29,6 +29,8 @@ This module creates a JSON parameter file for the spatial transcriptomics proces
 | `--mapping_acronym` | str | Acronym for mapped column names and file names |
 | `--clobber` | bool | True to overwrite existing results |
 | `--drop_genes_list` | str | Comma-separated list of genes to drop from mapping |
+| `--run_add_colors` | str | True to add cell type colors, False to skip |
+
 
 ### DoubleMAD Filtering Parameters
 

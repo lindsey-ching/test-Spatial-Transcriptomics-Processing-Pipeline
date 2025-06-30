@@ -19,6 +19,7 @@ The color assignment step includes:
 ### Output Files
 
 - `{specimen}_{dataset_id}_{mapping_acronym}_{mapping_type}_combined.h5ad` - Data with color assignments saved to results/whole_dataset/
+- Ex: `mouse_638850_mmc_both_combined.h5ad`
 
 ### Configuration Parameters
 
@@ -26,7 +27,7 @@ The color assignment step includes:
         "mapping_type": "both",
     "metadata": {
         "specimen": "mouse",
-        "dataset_id": "720609",
+        "dataset_id": "638850",
 
 ### Parameter Descriptions
 

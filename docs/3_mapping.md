@@ -33,7 +33,15 @@ Intermediate Files:
 
 - `results/{mapping_acronym}_output/extended_results_{mapping_type}.json` - Detailed mapping results
 - `results/{mapping_acronym}_output/basic_results_{mapping_type}.csv` - Summary mapping results
-  
+
+### Added Metadata Columns:
+The mapping adds multiple columns to adata.obs with the format `{mapping_type}_{mapping_acronym}_{column}`:
+
+'hrc_mmc_class_label'
+'hrc_mmc_class_name'
+'hrc_mmc_class_bootstrapping_probability'
+'hrc_mmc_class_avg_correlation'
+
 ### Configuration Parameters
 The mapping parameters are specified in mapping_params.json:
 
@@ -82,11 +90,5 @@ The mapping parameters are specified in mapping_params.json:
 - `chunk_size`: Number of cells to process in each batch
 - `clobber`: Whether to overwrite existing output files (true/false)
 
-### Output Columns
-The mapping adds multiple columns to adata.obs with the format `{mapping_type}_{mapping_acronym}_{column}`:
 
-'hrc_mmc_class_label'
-'hrc_mmc_class_name'
-'hrc_mmc_class_bootstrapping_probability'
-'hrc_mmc_class_avg_correlation'
 

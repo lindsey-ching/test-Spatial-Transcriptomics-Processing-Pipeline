@@ -2,7 +2,7 @@
 ---
 This module performs hierarchical and/or flat cell type mapping using the MapMyCells framework to assign cell type annotations based on reference atlas data.
 
-### Overview
+## Overview
 The mapping step includes:
 
 - Data Validation - Validate input AnnData format and structure
@@ -11,14 +11,14 @@ The mapping step includes:
 - Result Integration - Combine mapping results with original data
 - Output Generation - Save annotated data with cell type assignments
 
-### Input Files
+## Input Files
 
 - `*.h5ad` - Filtered AnnData file from previous processing steps (located in subdirectories of data directory)
 - `*precomputed_stats*.h5` - Precomputed reference statistics file
 - `*marker*.json` - Serialized marker gene lookup table
 - `params.json` - Configuration file with mapping parameters
 
-### Output Files
+## Output Files
 Single Mapping Mode (`flat` or `hrc`):
 
 - `{section}_{mapping_acronym}_{mapping_type}.h5ad` - Mapped data saved to results/mapping_results/
@@ -42,7 +42,7 @@ The mapping adds multiple columns to adata.obs with the format `{mapping_type}_{
 'hrc_mmc_class_bootstrapping_probability'
 'hrc_mmc_class_avg_correlation'
 
-### Configuration Parameters
+## Configuration Parameters
 The mapping parameters are specified in mapping_params.json:
 
     "mapping_params": {
@@ -60,7 +60,7 @@ The mapping parameters are specified in mapping_params.json:
 
 
 ### Parameter Descriptions
-#### Core Parameters:
+**Core Parameters:**
 
 - `mapping_type`: Type of mapping to perform
   - `"flat"`: Flat mapping only
@@ -68,13 +68,13 @@ The mapping parameters are specified in mapping_params.json:
   - `"both"`: Run both flat and hierarchical mapping, combine results
 - `mapping_acronym`: Short identifier for metadata columns (e.g., "mmc")
 
-#### Gene Filtering:
+**Gene Filtering:**
 
 - `drop_genes_list`: Optional comma-separated string of gene names to exclude from mapping
   - Format: "'Gene1','Gene2','Gene3'"
   - Leave empty to skip gene filtering
   
-#### Mapping Algorithm:
+**Mapping Algorithm:**
 
 - `drop_level`: A level to drop from the cell type taxonomy before doing the mapping
 - `normalization`: Expression normalization method
@@ -84,7 +84,7 @@ The mapping parameters are specified in mapping_params.json:
 - `bootstrap_factor`: The factor by which to downsample the population of marker genes for each bootstrapping iteration
 - `n_runner_ups`: Number of runner-up cell types to report for each assignment
 
-#### Performance:
+**Performance:**
 
 - `n_processors`: Number of CPU cores to use for parallel processing
 - `chunk_size`: Number of cells to process in each batch

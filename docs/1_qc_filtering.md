@@ -17,6 +17,21 @@ The QC filtering and doublet detection step includes:
 ### Output Files
 `{section}_filtered.h5ad` - Filtered AnnData file with QC annotations saved to results/sections/
 
+### Added Metadata Columns:
+
+QC Filter Columns:
+- `{parameter}_qc_passed`: Boolean indicating if cell passes individual parameter threshold
+- `basic_qc_passed`: Boolean indicating if cell passes all basic QC filters
+- `doublets_qc_passed`: Boolean indicating if cell is not a doublet
+- `qc_passed`: Boolean indicating if cell passes all QC filters (basic + doublet)
+
+Doublet Detection Columns:
+- `doublet`: SOLO doublet prediction score
+- `singlet`: SOLO singlet prediction score
+- `prediction`: SOLO prediction category ('doublet' or 'singlet')
+- `dif`: Difference between doublet and singlet scores
+- `doublets_thr`: Threshold value used for doublet detection
+  
 ### Configuration Parameters
 The filtering parameters are specified in `params.json`:
 
@@ -46,20 +61,4 @@ Maximum Thresholds (`max`):
 - `total_counts`: Maximum total transcript counts per cell (applied to non-blank genes)
 - `pct_counts_blank`: Maximum percentage of blank/control transcript counts
 
-### Output Annotations
-The following columns are added to adata.obs:
 
-#### QC Filter Columns:
-
-- `{parameter}_qc_passed`: Boolean indicating if cell passes individual parameter threshold
-- `basic_qc_passed`: Boolean indicating if cell passes all basic QC filters
-- `doublets_qc_passed`: Boolean indicating if cell is not a doublet
-- `qc_passed`: Boolean indicating if cell passes all QC filters (basic + doublet)
-
-#### Doublet Detection Columns:
-
-- `doublet`: SOLO doublet prediction score
-- `singlet`: SOLO singlet prediction score
-- `prediction`: SOLO prediction category ('doublet' or 'singlet')
-- `dif`: Difference between doublet and singlet scores
-- `doublets_thr`: Threshold value used for doublet detection

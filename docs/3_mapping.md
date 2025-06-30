@@ -36,19 +36,19 @@ Intermediate Files:
   
 ### Configuration Parameters
 The mapping parameters are specified in mapping_params.json:
- "mapping_params": {
-        "normalization": "raw",
-        "drop_level": "CCN20230722_SUPT",
-        "mapping_type": "both",
-        "bootstrap_iteration": 100,
-        "bootstrap_factor": 0.9,
-        "n_runner_ups": 0,
-        "n_processors": 32,
-        "chunk_size": 10000,
-        "clobber": true,
-        "mapping_acronym": "mmc",
-        "drop_genes_list": null
-    }
+    "mapping_params": {
+          "normalization": "raw",
+          "drop_level": "CCN20230722_SUPT",
+          "mapping_type": "both",
+          "bootstrap_iteration": 100,
+          "bootstrap_factor": 0.9,
+          "n_runner_ups": 0,
+          "n_processors": 32,
+          "chunk_size": 10000,
+          "clobber": true,
+          "mapping_acronym": "mmc",
+          "drop_genes_list": null
+      }
 ### Parameter Descriptions
 #### Core Parameters:
 

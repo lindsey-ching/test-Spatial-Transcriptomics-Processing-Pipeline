@@ -2,7 +2,7 @@
 ---
 This module performs quality control on cell type mapping results using Double Median Absolute Deviation (DoubleMAD) statistics to identify and filter cells with poor mapping confidence scores. It sets dynamic thresholds based on the distribution of correlation scores within each cell type group.
 
-### Overview
+## Overview
 The DoubleMAD quality control step includes:
 
 - Data Loading - Load mapped AnnData object and filter for QC-passed cells
@@ -11,7 +11,7 @@ The DoubleMAD quality control step includes:
 - Bimodal Detection - Identify supertypes with bimodal correlation distributions
 - Results Integration - Add threshold and criteria columns to cell metadata
 
-### Input Files
+## Input Files
 
 - `*.h5ad` - Cell type mapped AnnData file with correlation scores from previous mapping step
 - `params.json` - Configuration file with DoubleMAD parameters
@@ -22,14 +22,14 @@ Required Input Columns in AnnData:
 - Class, subclass, supertype, and cluster annotations
 - Class, subclass, supertype, and cluster correlation scores
 
-### Output File
+## Output File
 `{specimen}_{dataset_id}_{mapping_type}_{mapping_acronym}_combined_doublemad.h5ad` - Updated AnnData file with DoubleMAD metrics saved to results/whole_dataset/
 
-#### Added Metadata Columns:
+### Added Metadata Columns:
 `{mapping_col}_cluster_thr_criteria` - Pass/fail criteria based on threshold comparison
 
 
-### Configuration Parameters
+## Configuration Parameters
 The DoubleMAD calculation is controlled by a parameter in `params.json`:
 
     "doublemad_params": {

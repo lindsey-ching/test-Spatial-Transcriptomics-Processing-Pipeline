@@ -35,17 +35,17 @@ The filtering parameters are specified in `params.json`:
     }
 
 ### Parameter Descriptions
-Minimum Thresholds (min):
+Minimum Thresholds (`min`):
 
 - `n_genes_by_counts`: Minimum number of genes detected per cell (applied to non-blank genes)
 - `total_counts`: Minimum total transcript counts per cell (applied to non-blank genes)
 - `volume`: Minimum cell volume
 
-Maximum Thresholds (max):
+Maximum Thresholds (`max`):
 
-- n_genes_by_counts: Maximum number of genes detected per cell (applied to non-blank genes)
-- total_counts: Maximum total transcript counts per cell (applied to non-blank genes)
-- pct_counts_blank: Maximum percentage of blank/control transcript counts
+- `n_genes_by_counts`: Maximum number of genes detected per cell (applied to non-blank genes)
+- `total_counts`: Maximum total transcript counts per cell (applied to non-blank genes)
+- `pct_counts_blank`: Maximum percentage of blank/control transcript counts
 
 ### Output Annotations
 The following columns are added to adata.obs:

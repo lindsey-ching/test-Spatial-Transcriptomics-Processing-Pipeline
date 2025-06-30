@@ -5,10 +5,10 @@ This module performs quality control filtering and doublet detection on spatial 
 ### Overview
 The QC filtering and doublet detection step includes:
 
-1. Data Loading & Preparation - Load AnnData and calculate QC metrics
-2. Basic QC Filtering - Apply minimum and maximum thresholds to filter low-quality cells
-3. Doublet Detection - Train VAE and SOLO models to identify doublet cells
-4. Results Saving - Save filtered data with QC annotations
+- Data Loading & Preparation - Load AnnData and calculate QC metrics
+- Basic QC Filtering - Apply minimum and maximum thresholds to filter low-quality cells
+- Doublet Detection - Train VAE and SOLO models to identify doublet cells
+- Results Saving - Save filtered data with QC annotations
 
 ### Input Files
 `*_pre.h5ad` - Preprocessed AnnData file located in subdirectories of the data directory

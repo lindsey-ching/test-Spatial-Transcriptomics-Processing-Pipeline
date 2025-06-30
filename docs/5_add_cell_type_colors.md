@@ -36,8 +36,8 @@ The color assignment step includes:
   - `"hrc"`: Hierarchical mapping only 
   - `"both"`: Run both flat and hierarchical mapping, combine results
 - `mapping_acronym`: Short identifier for metadata columns (e.g., "mmc")
-- 'specimen': Dataset species
-- 'dataset_id': Dataset ID
+- `specimen`: Dataset species
+- `dataset_id`: Dataset ID
 
 ### Output Columns
 The color assignment adds multiple color columns to adata.obs with the format `{mapping_prefix}_{mapping_acronym}_{level}_color` for each level, class, subclass, supertype, and cluster.

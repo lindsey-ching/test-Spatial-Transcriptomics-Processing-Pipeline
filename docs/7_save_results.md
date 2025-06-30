@@ -74,13 +74,9 @@ The save results function uses parameters from existing configuration file:
     }
   
 ### Parameter Descriptions
-#### Metadata Parameters:
 
 - `specimen`: Species name added to obs metadata
 - `dataset_id`: Dataset ID added to obs metadata
 - `age`: Age information added to obs metadata (optional)
 - `sex`: Sex information added to obs metadata (optional)
-
-#### Processing Parameters:
-
 - `mapping_type`: Used to locate input files via glob pattern matching (file pattern: `*{mapping_type}*.h5ad`)

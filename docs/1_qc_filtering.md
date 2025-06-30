@@ -20,7 +20,7 @@ The QC filtering and doublet detection step includes:
 ### Configuration Parameters
 The filtering parameters are specified in `params.json`:
 
-"filtering_params": {
+    "filtering_params": {
         "min": {
             "n_genes_by_counts": 6,
             "total_counts": 30,
@@ -30,8 +30,7 @@ The filtering parameters are specified in `params.json`:
             "total_counts": null,
             "pct_counts_blank": 2
         },
-        "doublets_cutoff": null,
-        "run_incongruous_genes": "False"
+        "doublets_cutoff": null
     }
 
 ### Parameter Descriptions

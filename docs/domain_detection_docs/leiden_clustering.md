@@ -49,7 +49,7 @@ The clustering parameters are specified in configuration files:
         "dataset_id": "749485"
     }
 
-**Resolution Parameters (`res_params/params_{resolution}.json`):**
+**Resolution Parameters:**
 
 {
     "resolution": "1.2"

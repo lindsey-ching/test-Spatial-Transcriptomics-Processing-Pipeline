@@ -36,18 +36,18 @@ Intermediate Files:
   
 ### Configuration Parameters
 The mapping parameters are specified in mapping_params.json:
-    "mapping_params": {
-        "normalization": "raw",
-        "drop_level": "supertype",
-        "mapping_type": "both",
-        "bootstrap_iteration": 100,
-        "bootstrap_factor": 0.9,
-        "n_runner_ups": 5,
-        "n_processors": 32,
-        "chunk_size": 10000,
-        "clobber": true,
-        "mapping_acronym": "mmc"
-    },
+      "mapping_params": {
+          "normalization": "raw",
+          "drop_level": "supertype",
+          "mapping_type": "both",
+          "bootstrap_iteration": 100,
+          "bootstrap_factor": 0.9,
+          "n_runner_ups": 5,
+          "n_processors": 32,
+          "chunk_size": 10000,
+          "clobber": true,
+          "mapping_acronym": "mmc"
+      }
 ### Parameter Descriptions
 #### Core Parameters:
 

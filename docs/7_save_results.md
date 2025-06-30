@@ -2,7 +2,7 @@
 ---
 This module consolidates and saves final processed results from the pipeline. It creates standardized output files for both whole dataset analysis and individual section analysis.
 
-### Overview
+## Overview
 The save results step includes:
 
 - Data Loading - Load processed AnnData object from previous pipeline steps
@@ -11,27 +11,27 @@ The save results step includes:
 - Data Layer Creation - Generate raw and log2-transformed expression layers
 - Output Generation - Save whole dataset and individual section files
 
-### Input Files
+## Input Files
 
 - `*{mapping_type}*.h5ad` - Processed AnnData file from previous pipeline steps
 - `params.json` - Configuration file with metadata information
 
-#### Required Input Columns in AnnData:
+### Required Input Columns in AnnData:
 
 - `production_cell_id` - Cell IDs for index setting
 - `*qc_passed*` - QC columns from previous pipeline steps
 - `center_x`, `center_y` - Spatial coordinates for cells
 - `section` - Section IDs for splitting data
 
-### Output Files
+## Output Files
 
-#### Whole Dataset Results:
+### Whole Dataset Results:
 - `{specimen}_{dataset_id}_filtered.h5ad` - Complete filtered dataset saved to results/whole_dataset/
 
-#### Individual Section Results:
+### Individual Section Results:
 - `{section_id}_filtered.h5ad` - Section-specific data saved to results/sections/
 
-#### Directory Structure:
+### Directory Structure:
 
     results/
     ├── whole_dataset/
@@ -41,7 +41,7 @@ The save results step includes:
         ├── section2_filtered.h5ad
         └── ...
 
-#### Added Metadata Columns:
+### Added Metadata Columns:
 
 adata.obs:
 - `final_qc_passed` - Boolean indicating cells passing all QC criteria
@@ -58,7 +58,7 @@ adata.layers:
 adata.obsm:
 - `spatial` - 2D array of spatial coordinates [`center_x`, `center_y`]
 
-### Configuration Parameters
+## Configuration Parameters
 The save results function uses parameters from existing configuration file:
 
     {

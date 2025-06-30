@@ -2,29 +2,29 @@
 ---
 This module calculates incongruity metrics for spatial transcriptomics data by analyzing co-expression patterns of gene pairs that should not be expressed together in the same cell.
 
-### Overview
+## Overview
 The incongruous genes calculation step includes:
 
 - Data Loading - Load filtered AnnData from previous QC step
 - Incongruous Gene Pair Analysis - Calculate percentage of gene pairs where 2 genes which are not typically found together, co-occur
 - Incongruous Genes Analysis - Compares the expression levels for each gene in an incongruous pair and calculates the perentage of the lower-expressed gene relative to the total number of genes expressed in each cell
 - Results Saving - Save data with incongruity metrics
-- 
-### Input Files
+
+## Input Files
 
 - `*.h5ad` - Filtered AnnData file from previous QC step (located in subdirectories of data directory)
 - `inconguent_gene*.csv` - Reference table of incongruous gene pairs
 - `params.json` - Configuration file containing `run_incongruous_genes` parameter
   
-### Output Files
+## Output Files
 
 `{section}_filtered.h5ad` - Updated AnnData file with incongruity metrics saved to results/sections/
 
-#### Added Metadata Columns
+### Added Metadata Columns
 - `incongruous_pairs_pct`:
 - `incongruous_genes_pct`:
   
-### Configuration Parameters
+## Configuration Parameters
 The incongruous genes calculation is controlled by a parameter in `params.json`:
 
     "filtering_params": {

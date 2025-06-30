@@ -2,7 +2,7 @@
 ---
 This module performs quality control filtering and doublet detection on spatial transcriptomics data using basic thresholding and SOLO (Semi-supervised Outlier Detection).
 
-### Overview
+## Overview
 The QC filtering and doublet detection step includes:
 
 - Data Loading & Preparation - Load AnnData and calculate QC metrics
@@ -10,11 +10,11 @@ The QC filtering and doublet detection step includes:
 - Doublet Detection - Train VAE and SOLO models to identify doublet cells
 - Results Saving - Save filtered data with QC annotations
 
-### Input Files
+## Input Files
 - `*_pre.h5ad` - Preprocessed AnnData file located in subdirectories of the data directory
 - `params.json` - Configuration file with filtering parameters
 
-### Output Files
+## Output Files
 `{section}_filtered.h5ad` - Filtered AnnData file with QC annotations saved to results/sections/
 
 ### Added Metadata Columns:
@@ -32,7 +32,7 @@ Doublet Detection Columns:
 - `dif`: Difference between doublet and singlet scores
 - `doublets_thr`: Threshold value used for doublet detection
   
-### Configuration Parameters
+## Configuration Parameters
 The filtering parameters are specified in `params.json`:
 
     "filtering_params": {

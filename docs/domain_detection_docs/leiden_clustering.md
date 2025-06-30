@@ -1,5 +1,5 @@
 # Leiden Clustering
---
+---
 
 This module performs Leiden clustering on spatial transcriptomics data using RAPIDS single-cell library with STAligner embeddings for neighbor graph construction.
 

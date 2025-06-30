@@ -2,7 +2,7 @@
 ---
 This module provides functionality to add standardized color mappings for cell type classifications to AnnData objects using the ABC atlas color scheme. It supports both flat and hierarchical mapping types and assigns consistent colors across different taxonomic levels.
 
-### Overview
+## Overview
 The color assignment step includes:
 
 - Data Validation - Validate required cell type columns exist in AnnData object
@@ -10,18 +10,27 @@ The color assignment step includes:
 - Dictionary Storage - Store color mappings in AnnData.uns
 - Output Generation - Save annotated data with complete color information
 
-### Input Files
+## Input Files
 
 - `*{mapping_type}_combined.h5ad` - Combined mapping results from previous processing steps (located in subdirectories of data directory)
 - `*annotation.csv` - Contains standardized ABC color mappings for all taxonomic levels
 - `params.json` - Configuration file with specimen and mapping parameters
   
-### Output Files
+## Output Files
 
 - `{specimen}_{dataset_id}_{mapping_acronym}_{mapping_type}_combined.h5ad` - Data with color assignments saved to results/whole_dataset/
 - Ex: `mouse_638850_mmc_both_combined.h5ad`
+- 
+### Added Metadata Columns
+The color assignment adds multiple color columns to adata.obs with the format `{mapping_prefix}_{mapping_acronym}_{level}_color` for each level, class, subclass, supertype, and cluster.
 
-### Configuration Parameters
+### Dictionary Storage in adata.uns:
+
+- `{mapping_prefix}_{mapping_acronym}_class_colors` - Class name to color mapping dictionary
+- `{mapping_prefix}_{mapping_acronym}_subclass_colors` - Subclass name to color mapping dictionary
+
+
+## Configuration Parameters
 
     "mapping_params": {
         "add_colors_bool": "True",
@@ -41,10 +50,4 @@ The color assignment step includes:
 - `specimen`: Dataset species
 - `dataset_id`: Dataset ID
 
-### Output Columns
-The color assignment adds multiple color columns to adata.obs with the format `{mapping_prefix}_{mapping_acronym}_{level}_color` for each level, class, subclass, supertype, and cluster.
 
-#### Dictionary Storage in adata.uns:
-
-- `{mapping_prefix}_{mapping_acronym}_class_colors` - Class name to color mapping dictionary
-- `{mapping_prefix}_{mapping_acronym}_subclass_colors` - Subclass name to color mapping dictionary

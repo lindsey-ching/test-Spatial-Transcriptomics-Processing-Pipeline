@@ -1,14 +1,43 @@
 # DoubleMAD Mapping Filtering
 ---
+This module performs quality control on cell type mapping results using Double Median Absolute Deviation (DoubleMAD) statistics to identify and filter cells with poor mapping confidence scores. It sets dynamic thresholds based on the distribution of correlation scores within each cell type group.
 
-### Steps
+### Overview
+The DoubleMAD quality control step includes:
 
-Apply DoubleMAD average mapping correlation filtering. Label outliers based on the average correlations returned from mapping.
+- Data Loading - Load mapped AnnData object and filter for QC-passed cells
+- DoubleMAD Calculation - Compute left and right MAD statistics for each supertype group
+- Threshold Setting - Set dynamic thresholds
+- Bimodal Detection - Identify supertypes with bimodal correlation distributions
+- Results Integration - Add threshold and criteria columns to cell metadata
 
-### Parameters 
+### Input Files
 
-DoubleMAD threshold multiplier
+- `*.h5ad` - Cell type mapped AnnData file with correlation scores from previous mapping step
+- `params.json` - Configuration file with DoubleMAD parameters
 
-### Columns Added
+Required Input Columns in AnnData:
 
-'flat_CDM_supertype_thr', 'flat_CDM_supertype_thr_criteria', 'flat_CDM_cluster_thr', 'flat_CDM_cluster_thr_criteria', 'flat_CDM_thr', 'flat_CDM_thr_criteria', 'flat_CDM_qc_passed', 'flat_CDM_is_bimodal_supertype', 'flat_CDM_is_bimodal_cluster', 'hrc_CDM_supertype_thr', 'hrc_CDM_supertype_thr_criteria', 'hrc_CDM_cluster_thr', 'hrc_CDM_cluster_thr_criteria', 'hrc_CDM_thr', 'hrc_CDM_thr_criteria', 'hrc_CDM_qc_passed', 'hrc_CDM_is_bimodal_supertype', 'hrc_CDM_is_bimodal_cluster'
+- `qc_passed` - Boolean column indicating cells that passed initial QC
+- Class, subclass, supertype, and cluster annotations
+- Class, subclass, supertype, and cluster correlation scores
+
+### Output File
+`{specimen}_{dataset_id}_{mapping_type}_{mapping_acronym}_combined_doublemad.h5ad` - Updated AnnData file with DoubleMAD metrics saved to results/whole_dataset/
+
+#### Added Metadata Columns:
+`{mapping_col}_cluster_thr_criteria` - Pass/fail criteria based on threshold comparison
+
+
+### Configuration Parameters
+The DoubleMAD calculation is controlled by a parameter in `params.json`:
+
+    "doublemad_params": {
+        "run_doublemad": "True",
+        "doublemad_multiplier": 3
+    }
+  
+### Parameter Descriptions
+
+- `run_doublemad`: String boolean ("True" or "False") to enable/disable DoubleMAD calculation
+- `doublemad_multiplier`: Multiplier for DoubleMAD threshold calculation

@@ -32,7 +32,7 @@ The color assignment step includes:
 
 ### Parameter Descriptions
 
-- `add_colors_bool': String boolean ("True" or "False") to add/skip color mappings
+- `add_colors`: String boolean ("True" or "False") to add/skip color mappings
 - `mapping_type`: Type of mapping to perform
   - `"flat"`: Flat mapping only
   - `"hrc"`: Hierarchical mapping only 

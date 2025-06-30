@@ -1,7 +1,7 @@
 # Combine Sections
 ---
 
-This module aggregates individual section-level AnnData files into a single combined dataset for whole-dataset analysis. \
+This module aggregates individual section-level AnnData files into a single combined dataset for whole-dataset analysis. 
 
 ## Overview
 The combine sections step includes:

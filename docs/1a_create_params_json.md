@@ -75,7 +75,7 @@ The script generates two types of JSON parameter files:
     "domain_detection_params": {
         "grid_size": int,
         "n_neighbors": int,
-        "cluster_key": "string"
+        "cluster_key": str
     },
     "filtering_params": {
         "min": {
@@ -87,31 +87,31 @@ The script generates two types of JSON parameter files:
             "total_counts": int,
             "pct_counts_blank": int
         },
-        "doublets_cutoff": "string",
-        "run_incongruous_genes": "string"
+        "doublets_cutoff": str,
+        "run_incongruous_genes": str
     },
     "mapping_params": {
-        "normalization": "string",
-        "drop_level": "string",
-        "mapping_type": "string",
+        "normalization": str,
+        "drop_level": str,
+        "mapping_type": str,
         "bootstrap_iteration": int,
         "bootstrap_factor": float,
         "n_runner_ups": int,
         "n_processors": int,
         "chunk_size": int,
         "clobber": boolean,
-        "mapping_acronym": "string",
-        "drop_genes_list": "string"
+        "mapping_acronym": str,
+        "drop_genes_list": str
     },
     "doublemad_params": {
-        "run_doublemad": "string",
+        "run_doublemad": str,
         "doublemad_multiplier": int
     },
     "metadata": {
-        "specimen": "string",
-        "dataset_id": "string",
-        "age": "string",
-        "sex": "string"
+        "specimen": str,
+        "dataset_id": str,
+        "age": str,
+        "sex": str
     }
 }
 ```

@@ -55,7 +55,7 @@ The clustering parameters are specified in configuration files:
     "resolution": "1.2"
 }
 
-## Parameter Descriptions
+### Parameter Descriptions
 
 **Domain Detection Parameters:**
 - `n_neighbors`: Number of nearest neighbors for graph construction 

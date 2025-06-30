@@ -1,6 +1,6 @@
 # Create Parameters JSON
 --
-This module creates a JSON parameter file for the spatial transcriptomics processing pipeline. The script takes command-line arguments and generates structured JSON configuration files that can be used by downstream analysis tools.
+This module creates a JSON parameter file for the spatial transcriptomics processing pipeline. 
 
 #### Filtering Parameters
 

@@ -22,9 +22,10 @@ The incongruous genes calculation step includes:
 
 ### Configuration Parameters
 The incongruous genes calculation is controlled by a parameter in `params.json`:
-json{
-  "run_incongruous_genes": "True"
-  }
+
+    "filtering_params": {
+        "run_incongruous_genes": "True"
+    }
 
 ### Parameter Descriptions
 

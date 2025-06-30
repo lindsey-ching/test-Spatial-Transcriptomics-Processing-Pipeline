@@ -24,6 +24,7 @@ The color assignment step includes:
 ### Configuration Parameters
 
     "mapping_params": {
+        "add_colors_bool": "True",
         "mapping_type": "both",
     "metadata": {
         "specimen": "mouse",
@@ -31,6 +32,7 @@ The color assignment step includes:
 
 ### Parameter Descriptions
 
+- `add_colors_bool': String boolean ("True" or "False") to add/skip color mappings
 - `mapping_type`: Type of mapping to perform
   - `"flat"`: Flat mapping only
   - `"hrc"`: Hierarchical mapping only 

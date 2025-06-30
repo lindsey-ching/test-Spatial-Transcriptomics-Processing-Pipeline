@@ -28,7 +28,6 @@ The color assignment step includes:
         "specimen": "mouse",
         "dataset_id": "720609",
 
-
 ### Parameter Descriptions
 
 - `mapping_type`: Type of mapping to perform

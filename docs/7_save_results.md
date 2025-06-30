@@ -62,8 +62,7 @@ The save results function uses parameters from existing configuration file:
 
     {
     "mapping_params": {
-        "mapping_type": "both",
-        "mapping_acronym": "mmc"
+        "mapping_type": "both"
     }, 
     "metadata": {
         "specimen": "mouse",

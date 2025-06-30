@@ -20,6 +20,10 @@ The incongruous genes calculation step includes:
 
 `{section}_filtered.h5ad` - Updated AnnData file with incongruity metrics saved to results/sections/
 
+#### Added Metadata Columns
+- `incongruous_pairs_pct`:
+- `incongruous_genes_pct`:
+  
 ### Configuration Parameters
 The incongruous genes calculation is controlled by a parameter in `params.json`:
 

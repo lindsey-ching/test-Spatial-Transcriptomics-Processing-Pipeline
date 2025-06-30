@@ -32,13 +32,14 @@ The save results step includes:
 - `{section_id}_filtered.h5ad` - Section-specific data saved to results/sections/
 
 #### Directory Structure:
-results/
-├── whole_dataset/
-│   └── {specimen}_{dataset_id}_filtered.h5ad
-└── sections/
-    ├── section1_filtered.h5ad
-    ├── section2_filtered.h5ad
-    └── ...
+
+    results/
+    ├── whole_dataset/
+    │   └── {specimen}_{dataset_id}_filtered.h5ad
+    └── sections/
+        ├── section1_filtered.h5ad
+        ├── section2_filtered.h5ad
+        └── ...
 
 #### Added Metadata Columns:
 

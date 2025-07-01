@@ -12,11 +12,11 @@ The STAligner step includes:
 - Results Saving - Save integrated data with aligned embeddings
 
 ## Input Files
-- `../data/*downsampled*/{section_id}*.h5ad` - Gridded AnnData files from downsample spot table step
-- `../data/*/*barcodes*.csv` - Optional CSV file with section ordering information (columns: dataset_id, barcode, AP_order)
+- `{section_id}*.h5ad` - Gridded AnnData files from downsample spot table step
+- `*barcodes*.csv` - Optional CSV file with section ordering information (columns: dataset_id, barcode, AP_order)
 
 ## Output Files
-`../results/domain_detection/{specimen}_{dataset_id}_staligner_knn_{n_neighbors}.h5ad` - Integrated AnnData file with STAligner embeddings and alignments
+`{specimen}_{dataset_id}_staligner_knn_{n_neighbors}.h5ad` - Integrated AnnData file with STAligner embeddings and alignments saved to `results/domain_detection/`
 
 ### Added Metadata Columns:
 

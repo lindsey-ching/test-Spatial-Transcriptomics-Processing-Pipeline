@@ -13,7 +13,7 @@ The run SPACEL step includes:
 
 ## Output Files
 The following results are saved to `/results/whole_dataset/`:
-- `.{specimen}_{dataset_id}_spacel.h5ad` - Aligned AnnData file with SPACEL spatial coordinates
+- `{specimen}_{dataset_id}_spacel.h5ad` - Aligned AnnData file with SPACEL spatial coordinates
 - `aligned_coordinates.csv` - CSV file containing aligned coordinates across sections
 - `warp_info.npy` - NPY file with transformations applied to each slice
 

@@ -11,7 +11,7 @@ The QC filtering and doublet detection step includes:
 - Results Saving - Save filtered data with QC annotations
 
 ## Input Files
-- `*_pre.h5ad` - Preprocessed AnnData file located in subdirectories of the data directory
+- `*_pre.h5ad` - Preprocessed AnnData file
 - `params.json` - Configuration file with filtering parameters
 
 ## Output Files

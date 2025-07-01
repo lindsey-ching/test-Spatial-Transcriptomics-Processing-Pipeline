@@ -12,9 +12,10 @@ The run SPACEL step includes:
 - `../data/*/*/*clustered*.h5ad` - Clustered AnnData file from previous clustering step containing spatial domain annotations
 
 ## Output Files
-- `../results/whole_dataset/{specimen}_{labtracks_id}_spacel.h5ad` - Aligned AnnData file with SPACEL spatial coordinates
-- `../results/whole_dataset/aligned_coordinates.csv` - CSV file containing aligned coordinates across sections
-- `../results/whole_dataset/warp_info.npy` - NPY file with transformations applied to each slice
+The following results are saved to `/results/whole_dataset/`:
+- `.{specimen}_{labtracks_id}_spacel.h5ad` - Aligned AnnData file with SPACEL spatial coordinates
+- `aligned_coordinates.csv` - CSV file containing aligned coordinates across sections
+- `warp_info.npy` - NPY file with transformations applied to each slice
 
 ### Added Metadata Columns:
 

@@ -1,6 +1,6 @@
 # Save Results
 ---
-This module consolidates and saves final processed results from the pipeline. It creates standardized output files for both whole dataset analysis and individual section analysis.
+This module consolidates and saves final processed results from the pipeline.
 
 ## Overview
 The save results step includes:

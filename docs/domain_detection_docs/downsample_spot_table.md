@@ -5,17 +5,16 @@ This module spatially bins MERFISH transcript spots into a  grid and performs QC
 ## Overview
 The downsample spot table step includes:
 
-- Spatial Gridding - Bin transcript spots into grid cells
+- Spatial Gridding - Read detected transcripts csv from S3 and bin transcripts into grids
 - QC Metrics Calculation - Calculate gene counts, transcript counts, and blank percentages per grid
 - Quality Control Filtering - Apply configurable thresholds to identify high-quality grids for STAligner 
 - Results Saving - Save gridded data as AnnData object with QC annotations
 
 ## Input Files
-- `merfish_output/{experiment_id}/region_{region}/detected_transcripts.csv` - Detected transcripts CSV file from S3 bucket (or `legacy_output/` for specific experiments)
-- `*.json` - Section metadata JSON file containing barcode, region, and experiment_id
+- `{section}_section_metadata.json` - Section metadata JSON file containing barcode, region, and experiment_id
 
 ## Output Files
-`../results/downsampled/{section}_gridded.h5ad` - Gridded AnnData file with QC annotations
+- `{section}_gridded.h5ad` - Gridded AnnData file with QC annotations
 
 ### Added Metadata Columns:
 

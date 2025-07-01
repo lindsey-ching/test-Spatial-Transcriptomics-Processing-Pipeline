@@ -27,9 +27,8 @@ Required Input Columns in AnnData:
 
 ### Added Metadata Columns:
 
-For each taxonomy level class, subclass, cluster, supertype: 
-- `{mapping_type}_{mapping_acronym}_{level}_thr` - DoubleMAD threshold 
-- `{mapping_type}_{mapping_acronym}_{level}_thr_criteria` - Pass/fail criteria based on threshold comparison
+- `{mapping_type}_{mapping_acronym}_{level}_thr` - DoubleMAD threshold for each taxonomy level class, subclass, cluster, supertype
+- `{mapping_type}_{mapping_acronym}_{level}_thr_criteria` - Pass/fail criteria based on threshold comparison for each taxonomy level class, subclass, cluster, supertype
 - `is_bimodal_supertype`, `is_bimodal_cluster` - Boolean indicating whether supertype/cluster average correlation distribution is bimodal
 - `{mapping_type}_{mapping_acronym}_qc_passed` - Boolean indicating if cell passes DoubleMAD threshold
 

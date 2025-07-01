@@ -1,11 +1,39 @@
 # Run STAligner
 ---
+This module performs spatial alignment and integration of multiple tissue sections using STAligner, a deep learning framework for spatial transcriptomics data integration.
 
-### Steps
-Train STAligner subgraph. 
+## Overview
+The STAligner step includes:
+- Data Loading & Preparation - Load gridded h5ad files and apply quality control filtering
+- Section Ordering - Determine anterior-posterior order from CSV or sort by barcode
+- Spatial Network Construction - Build KNN spatial networks for each section
+- Data Preprocessing - Normalize, log-transform, and select highly variable genes
+- Multi-Section Integration - Train STAligner model to align sections sequentially
+- Results Saving - Save integrated data with aligned embeddings
 
-### Parameters
-Number of neighbors to construct KNN spatial network.
+## Input Files
+- `../data/*downsampled*/{section_id}*.h5ad` - Gridded AnnData files from downsample spot table step
+- `../data/*/*barcodes*.csv` - Optional CSV file with section ordering information (columns: dataset_id, barcode, AP_order)
 
-### Columns Added
-obsm: 'STAGATE', 'STAligner'
+## Output Files
+`../results/domain_detection/{specimen}_{dataset_id}_staligner_knn_{n_neighbors}.h5ad` - Integrated AnnData file with STAligner embeddings and alignments
+
+### Added Metadata Columns:
+
+Integration Metadata:
+- `slice_name`: Section identifier for each grid
+- `batch_name`: Categorical batch identifier (same as slice_name)
+
+STAligner Results:
+- `obsm['STAligner']`: Low-dimensional embeddings from STAligner integration
+- `obsm['STAGATE']`: 
+- `uns['adj']`: Spatial adjacency matrices for each section
+- `var['highly_variable']`: Boolean indicating highly variable genes used for integration
+
+## Configuration Parameters
+The parameters are specified as command-line arguments:
+- `--specimen`: Species name for output file naming
+- `--dataset_id`: Dataset identifier used for section filtering and output file naming
+- `--n_neighbors`: Number of neighbors for KNN spatial network construction
+- `--reverse`: Controls section ordering direction. Set to 'True' to reverse numerical ordering of barcodes when no AP_order CSV is provided
+

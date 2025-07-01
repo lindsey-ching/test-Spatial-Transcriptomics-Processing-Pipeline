@@ -42,7 +42,7 @@ The save results step includes:
 ### Added Metadata Columns:
 
 adata.obs:
-- `final_qc_passed` - Boolean indicating cells passing all QC criteria
+- `final_qc_passed` - Boolean indicating cells passing all QC criteria (genes, transcripts, blanks, doublets, & DoubleMAD)
 - `production_cell_id` - Cell IDs (used as index)
 - `specimen` - Species name
 - `dataset_id` - Dataset identifier

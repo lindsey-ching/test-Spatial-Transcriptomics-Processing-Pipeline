@@ -22,23 +22,26 @@ The color assignment step includes:
 - Ex: `mouse_638850_mmc_both_combined.h5ad`
 - 
 ### Added Metadata Columns
-The color assignment adds multiple color columns to adata.obs with the format `{mapping_prefix}_{mapping_acronym}_{level}_color` for each level, class, subclass, supertype, and cluster.
+The color assignment adds multiple color columns to adata.obs with the format `{mapping_type}_{mapping_acronym}_{level}_color` for each level, class, subclass, supertype, and cluster.
 
 ### Dictionary Storage in adata.uns:
 
-- `{mapping_prefix}_{mapping_acronym}_class_colors` - Class name to color mapping dictionary
-- `{mapping_prefix}_{mapping_acronym}_subclass_colors` - Subclass name to color mapping dictionary
+- `{mapping_type}_{mapping_acronym}_class_colors` - Class name to color mapping dictionary
+- `{mapping_type}_{mapping_acronym}_subclass_colors` - Subclass name to color mapping dictionary
 
 
 ## Configuration Parameters
 
+    {
     "mapping_params": {
         "add_colors_bool": "True",
-        "mapping_type": "both",
+        "mapping_type": "hrc",
+        "mapping_acronym": "mmc"},
     "metadata": {
         "specimen": "mouse",
-        "dataset_id": "638850",
-
+        "dataset_id": "638850"}
+    }
+    
 ### Parameter Descriptions
 
 - `add_colors`: String boolean ("True" or "False") to add/skip color mappings

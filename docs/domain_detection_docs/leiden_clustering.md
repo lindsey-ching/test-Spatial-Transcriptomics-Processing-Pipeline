@@ -13,25 +13,19 @@ The Leiden clustering step includes:
 
 ## Input Files
 
-- `*staligner*.h5ad` - Preprocessed AnnData file with STAligner embeddings 
+- `*staligner*.h5ad` - AnnData file with STAligner embeddings 
 - `params.json` - Configuration file with clustering parameters
 - `res_params/params_{resolution}.json` - Resolution-specific parameter file
 
 ## Output Files
 
 - `{specimen}_{dataset_id}_res_{resolution}_clustered.h5ad` - Clustered AnnData file saved to `results/clustered/`
-- Ex: `mouse_638850_res_1.2_clustered.h5ad`
 
 ### Added Metadata Columns
 
-**Clustering Results:**
-* `leiden_res_{resolution}_knn_{n_neighbors}`: Leiden cluster assignments as categorical variable
-
-**Dimensionality Reduction:**
-* `X_umap`: UMAP coordinates stored in `.obsm` for 2D visualization
-
-**Graph Connectivity:**
-* Neighbor graph stored in `.obsp` and `.uns` for downstream analysis
+- `leiden_res_{resolution}_knn_{n_neighbors}`: Leiden cluster assignments
+- `X_umap`: UMAP coordinates stored in `.obsm`
+- Neighbors graph stored in `.obsp`
 
 ## Configuration Parameters
 
@@ -39,7 +33,6 @@ The clustering parameters are specified in configuration files:
 
     {
     "domain_detection_params": {
-        "grid_size": 30,
         "n_neighbors": 8,
         "cluster_key": "STAligner"
     },

@@ -1,5 +1,4 @@
 # Add Clusters CBG Pipeline Step
---
 This module maps cluster assignments from downsampled STALigner gridded data to cell segmentation data.
 
 ## Input Files

@@ -39,7 +39,7 @@ QC Filter Columns:
 The parameters are specified as command-line arguments:
 - `--grid_size`: Grid cell size in micrometers
 - `--bucket_name`: S3 bucket name containing transcript data
-- `--object_key_template`: S3 object key template
+- `--object_key_template`: S3 object key template to transcripts file
 - `--genes_thr`: Minimum number of genes required per grid
 - `--transcripts_thr`: Minimum total transcript count per grid
 - `--blanks_thr`: Maximum percentage of blanks per grid allowed

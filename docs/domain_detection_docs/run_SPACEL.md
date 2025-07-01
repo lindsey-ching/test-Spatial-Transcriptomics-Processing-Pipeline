@@ -13,7 +13,7 @@ The run SPACEL step includes:
 
 ## Output Files
 The following results are saved to `/results/whole_dataset/`:
-- `.{specimen}_{labtracks_id}_spacel.h5ad` - Aligned AnnData file with SPACEL spatial coordinates
+- `.{specimen}_{dataset_id}_spacel.h5ad` - Aligned AnnData file with SPACEL spatial coordinates
 - `aligned_coordinates.csv` - CSV file containing aligned coordinates across sections
 - `warp_info.npy` - NPY file with transformations applied to each slice
 
@@ -25,7 +25,7 @@ Spatial Alignment Results:
 
 ## Configuration Parameters
 The parameters are specified as command-line arguments:
-- `--specimen`: Specimen identifier for output naming
-- `--labtracks_id`: Lab tracking identifier for output naming
+- `--specimen`: Species name for output naming
+- `--dataset_id`: Dataset ID for output naming
 - `--n_neighbors`: Number of neighbors used in clustering (for cluster key naming)
 - `--res`: Resolution parameter used in clustering (for cluster key naming)

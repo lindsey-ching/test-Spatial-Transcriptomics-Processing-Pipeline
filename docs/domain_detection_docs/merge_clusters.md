@@ -5,7 +5,7 @@ Consolidates cluster assignments to full processed dataset.
 ## Overview
 - Merges cluster labels from processed sections back into the complete filtered dataset
 - Dynamically loads clustering results from multiple resolution parameters
-- Outputs both consolidated whole-dataset and individual section files
+- Outputs both consolidated whole dataset and individual section files
 
 ## Input Files
 - `*/whole_dataset/*{dataset_id}*.h5ad` - Original filtered whole dataset (from Save Results step)

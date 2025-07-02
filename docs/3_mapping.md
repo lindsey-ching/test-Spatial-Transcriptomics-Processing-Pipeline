@@ -1,6 +1,6 @@
 # Cell Type Mapping 
 ---
-This module performs hierarchical and/or flat cell type mapping using the MapMyCells framework to assign cell type annotations based on reference atlas data.
+This module performs hierarchical and/or flat cell type mapping using the MapMyCells to assign cell type annotations based on reference atlas data.
 
 ## Overview
 The mapping step includes:

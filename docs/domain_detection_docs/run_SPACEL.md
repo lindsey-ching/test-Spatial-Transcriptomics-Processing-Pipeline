@@ -9,7 +9,7 @@ The run SPACEL step includes:
 - Results Saving - Save aligned data with new spatial coordinates
 
 ## Input Files
-- `../data/*/*/*clustered*.h5ad` - Clustered AnnData file from previous clustering step containing spatial domain annotations
+- `*clustered*.h5ad` - Clustered AnnData file from clustering step containing spatial domain annotations
 
 ## Output Files
 The following results are saved to `/results/whole_dataset/`:

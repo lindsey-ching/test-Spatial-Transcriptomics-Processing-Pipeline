@@ -34,6 +34,9 @@ Save final processed results from the pipeline.
 3. **Execution**: Run steps sequentially, starting with Step 1
 4. **Output**: Each step generates intermediate files for the next step
 
+## Pipeline Options:
+1. Pipeline with Domain Detection:(https://codeocean.allenneuraldynamics.org/capsule/5774767/tree)
+2. 
 ## File Structure
 
 ```

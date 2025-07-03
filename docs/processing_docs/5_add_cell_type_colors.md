@@ -12,7 +12,7 @@ The color assignment step includes:
 
 ## Input Files
 
-- `*{mapping_type}_combined.h5ad` - Combined mapping results from previous processing steps (located in subdirectories of data directory)
+- `*{mapping_type}_combined.h5ad` - Combined mapping results from previous processing steps 
 - `*annotation.csv` - Contains standardized ABC color mappings for all taxonomic levels
 - `params.json` - Configuration file with specimen and mapping parameters
   
@@ -20,15 +20,14 @@ The color assignment step includes:
 
 - `{specimen}_{dataset_id}_{mapping_acronym}_{mapping_type}_combined.h5ad` - Data with color assignments saved to results/whole_dataset/
 - Ex: `mouse_638850_mmc_both_combined.h5ad`
-- 
+  
 ### Added Metadata Columns
-The color assignment adds multiple color columns to adata.obs with the format `{mapping_type}_{mapping_acronym}_{level}_color` for each level, class, subclass, supertype, and cluster.
+The color assignment adds multiple color columns to adata.obs with the format `{mapping_type}_{mapping_acronym}_{level}_color` for each level (class, subclass, supertype, and cluster).
 
 ### Dictionary Storage in adata.uns:
 
 - `{mapping_type}_{mapping_acronym}_class_colors` - Class name to color mapping dictionary
 - `{mapping_type}_{mapping_acronym}_subclass_colors` - Subclass name to color mapping dictionary
-
 
 ## Configuration Parameters
 

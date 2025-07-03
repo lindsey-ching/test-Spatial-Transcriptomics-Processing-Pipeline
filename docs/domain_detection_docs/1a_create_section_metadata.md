@@ -1,6 +1,6 @@
 # Section Metadata Generation
 ---
-This module generates individual section metadata files from barcode CSV data for downstream downsampling.
+This module generates individual section metadata files from barcode CSV data to dispatch jobs for downstream downsampling.
 
 ## Overview
 The section metadata generation step includes:

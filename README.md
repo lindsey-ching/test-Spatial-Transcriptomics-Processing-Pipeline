@@ -2,7 +2,7 @@
 ---
 This repository contains a comprehensive processing pipeline for spatial transcriptomics data analysis.
 
-This analysis pipeline was built and deployed on Code Ocean, a cloud-based computational research platform, but can also be run locally. The pipeline leverages Code Ocean's containerized environment to ensure reproducible results across different computing environments.
+This analysis pipeline was built and deployed on Code Ocean, a cloud-based computational research platform. The pipeline leverages Code Ocean's containerized environment to ensure reproducible results across different computing environments.
 
 Code Ocean documentation: https://docs.codeocean.com/user-guide 
 
@@ -49,7 +49,7 @@ Consolidate cluster assignments to full processed dataset.
 
 ## Quick Start
 
-1. **Configuration**: Update App Panel or `params.json` with your parameters
+1. **Configuration**: Update App Panel with your parameters
 2. **Execution**: Click Run with parameters to run each step sequentially 
 3. **Output**: Each step generates intermediate files for the next step
 
@@ -60,21 +60,18 @@ Consolidate cluster assignments to full processed dataset.
 ## Running the Pipeline
 
 - The pipeline can be executed directly within Code Ocean through the web interface or via the Code Ocean API. All dependencies are pre-installed in the containerized environment, eliminating setup complexity.
-- Each step can be run independently if intermediate files are available
+- Each step can be run independently if intermediate files are available.
 - This workflow can be run on one or more sections.
   
 ## Configuration
 
 All pipeline parameters are centralized in `params.json`. Key parameter categories include:
 
-- **Filtering Parameters**: QC thresholds and doublet detection settings
-- **Mapping Parameters**:
-- **DoubleMAD Parameters**: 
-- **Metadata Parameters**:
-- **Domain Detection Parameters**:
-
-## Dependencies
-
+- **Filtering Parameters**
+- **Mapping Parameters**
+- **DoubleMAD Parameters**
+- **Metadata Parameters**
+- **Domain Detection Parameters**
 
 ## Support
 

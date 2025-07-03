@@ -20,11 +20,8 @@ The STAligner step includes:
 
 ### Added Metadata Columns:
 
-Integration Metadata:
 - `slice_name`: Section ID 
 - `batch_name`: Categorical batch identifier (same as slice_name)
-
-STAligner Results:
 - `obsm['STAligner']`: Low-dimensional embeddings from STAligner integration
 - `obsm['STAGATE']`: 
 - `uns['adj']`: Spatial adjacency matrices for each section

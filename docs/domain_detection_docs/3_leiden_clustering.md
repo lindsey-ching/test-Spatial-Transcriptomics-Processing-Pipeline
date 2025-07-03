@@ -1,15 +1,15 @@
 # Leiden Clustering
 ---
-This module performs Leiden clustering on spatial transcriptomics data using RAPIDS single-cell library with STAligner embeddings for neighbor graph construction.
+This module performs Leiden clustering using RAPIDS single-cell library with STAligner embeddings for neighbor graph construction.
 
 ## Overview
 
 The Leiden clustering step includes:
 
 - Neighbor Graph Construction - Build k-nearest neighbor graph using spatial embeddings
-- Leiden Clustering - Apply Leiden algorithm with specified resolution
+- Leiden Clustering - Apply Leiden algorithm with one or more specified resolution(s)
 - UMAP Generation - Create 2D embedding for visualization
-- Results Saving - Save clustered data with cluster assignments
+- Results Saving - Save data with cluster assignments
 
 ## Input Files
 

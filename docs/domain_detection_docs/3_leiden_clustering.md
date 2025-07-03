@@ -43,9 +43,9 @@ The clustering parameters are specified in configuration files:
 
 **Resolution Parameters:**
 
-{
-    "resolution": "1.2"
-}
+    {
+        "resolution": "1.2"
+    }
 
 ### Parameter Descriptions
 

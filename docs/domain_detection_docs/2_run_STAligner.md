@@ -1,6 +1,6 @@
 # Run STAligner
 ---
-This module performs spatial alignment and integration of multiple tissue sections using STAligner, a deep learning framework for spatial transcriptomics data integration.
+This module performs spatial alignment and integration of multiple tissue sections using [STAligner](https://github.com/zhoux85/STAligner), a deep learning framework for spatial transcriptomics data integration.
 
 ## Overview
 The STAligner step includes:

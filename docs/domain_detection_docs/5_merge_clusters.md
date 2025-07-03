@@ -1,6 +1,6 @@
 # Merge All Cluster Columns
 
-Consolidates cluster assignments to full processed dataset. 
+This module consolidates cluster assignments to full processed dataset. 
 
 ## Overview
 - Merges cluster labels from processed sections back into the complete filtered dataset

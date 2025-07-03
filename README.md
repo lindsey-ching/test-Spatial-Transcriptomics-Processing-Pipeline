@@ -33,7 +33,7 @@ Save final processed results from the pipeline.
 
 ## Domain Detection Pipeline Overview
 ### [Step 1: Downsample Spot Table](./docs/domain_detection_docs/1_downsample_spot_table.md)
-Bin transcript spots into a grid and performs QC filtering.
+Bin transcript spots and performs QC filtering.
 
 ### [Step 2: Run STAligner](./docs/domain_detection_docs/2_run_STAligner.md)
 Perform spatial alignment and integration of multiple tissue sections using STAligner.

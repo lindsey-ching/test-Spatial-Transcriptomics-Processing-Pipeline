@@ -12,7 +12,7 @@ The incongruous genes calculation step includes:
 
 ## Input Files
 
-- `*.h5ad` - Filtered AnnData file from previous QC step (located in subdirectories of data directory)
+- `*.h5ad` - Filtered AnnData file from previous QC step
 - `inconguent_gene*.csv` - Reference table of incongruous gene pairs
 - `params.json` - Configuration file containing `run_incongruous_genes` parameter
   
@@ -21,9 +21,9 @@ The incongruous genes calculation step includes:
 `{section}_filtered.h5ad` - Updated AnnData file with incongruity metrics saved to results/sections/
 
 ### Added Metadata Columns
-- `incongruous_pairs_pct`:
-- `incongruous_genes_pct`:
-  
+- `incongruous_pairs_pct`: Percentage of gene pairs where 2 genes which are not typically found together, co-occur
+- `incongruous_genes_pct`: Compares expression levels for each gene in an incongruous pair, percentage of the lower-expressed gene relative to total number of genes expressed in cell
+
 ## Configuration Parameters
 The incongruous genes calculation is controlled by a parameter in `params.json`:
 

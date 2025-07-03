@@ -37,20 +37,21 @@ QC Filter Columns:
 ## Configuration Parameters
 The DoubleMAD parameters are listed in `params.json`:
 
-"downsample_params": {
-        "grid_size": 30,
-        "bucket_name": "mfish-xenium-meth-dev-and-pilot-802451596237-us-west-2",
-        "object_key_template": "{experiment_id}/transcripts.parquet",
-        "modality": "xenium",
-        "genes_thr": 60,
-        "transcripts_thr": 300,
-        "blanks_thr": 3
-    }
+        "downsample_params": {
+                "grid_size": 30,
+                "bucket_name": "mfish-merscope-mouse-dev-802451596237-us-west-2",
+                "object_key_template": "merfish_output/{experiment_id}/region_{section_region}/detected_transcripts.csv",
+                "modality": "merscope",
+                "genes_thr": 60,
+                "transcripts_thr": 300,
+                "blanks_thr": 3
+            }
 
 ### Parameter Descriptions
 - `grid_size`: Grid cell size in micrometers
 - `bucket_name`: S3 bucket name containing transcript data
 - `object_key_template`: S3 object key template to transcripts file
+- `modality` - Imaging modality to read in transcripts file (e.g., "xenium" or "merscope")
 - `genes_thr`: Minimum number of genes required per grid
 - `transcripts_thr`: Minimum total transcript count per grid
 - `blanks_thr`: Maximum percentage of blanks per grid allowed

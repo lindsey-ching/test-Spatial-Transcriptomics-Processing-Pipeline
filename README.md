@@ -44,7 +44,7 @@ Perform Leiden clustering using RAPIDS single-cell library with STAligner embedd
 ### [Step 4: Add Clusters to Cells](./docs/domain_detection_docs/4_add_clusters_cbg.md)
 Map cluster assignments from downsampled STALigner gridded data to cell segmentation data.
 
-### [Step 5: Merge all Clusters](./docs/domain_detection_docs/5_merge_clusters.md)
+### [Step 5: Merge All Clusters](./docs/domain_detection_docs/5_merge_clusters.md)
 Consolidate cluster assignments to full processed dataset.
 
 ## Quick Start

@@ -11,8 +11,14 @@ The QC filtering and doublet detection step includes:
 - Results Saving - Save filtered data with QC annotations
 
 ## Input Files
-- `*_pre.h5ad` - Preprocessed AnnData file
+- `*_pre.h5ad` - Segmented AnnData file
 - `params.json` - Configuration file with filtering parameters
+
+### Required Metadata Columns:
+- `center_x` and `center_y`: cell centroid coordinates
+- `volume`: Cell volume (in microns)
+- `section`: Section ID
+- `production_cell_id`: Unique cell ID as index (i.e. {section}_CP_{i}) 
 
 ## Output Files
 `{section}_filtered.h5ad` - Filtered AnnData file with QC annotations saved to results/sections/

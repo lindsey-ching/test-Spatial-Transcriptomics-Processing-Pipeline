@@ -2,7 +2,11 @@
 ---
 This repository contains a comprehensive processing pipeline for spatial transcriptomics data analysis.
 
-## Pipeline Overview
+This analysis pipeline was built and deployed on Code Ocean, a cloud-based computational research platform, but can also be run locally. The pipeline leverages Code Ocean's containerized environment to ensure reproducible results across different computing environments.
+
+Code Ocean documentation: https://docs.codeocean.com/user-guide 
+
+## QC & Mapping Pipeline Overview
 
 The processing pipeline consists of the following sequential steps:
 
@@ -27,6 +31,22 @@ Perform quality control on cell type mapping results using Double Median Absolut
 ### [Step 7: Save Results](./docs/processing_docs/7_save_results.md)
 Save final processed results from the pipeline.
 
+## Domain Detection Pipeline Overview
+### [Step 1: Downsample Spot Table](./docs/domain_detection_docs/1_downsample_spot_table.md)
+Bin transcript spots into a grid and performs QC filtering.
+
+### [Step 2: Run STAligner](./docs/domain_detection_docs/2_run_STAligner.md)
+Perform spatial alignment and integration of multiple tissue sections using STAligner.
+
+### [Step 3: Leiden Clustering](./docs/domain_detection_docs/3_leiden_clustering.md)
+Perform Leiden clustering using RAPIDS single-cell library with STAligner embeddings.
+
+### [Step 4: Add Clusters to Cells](./docs/domain_detection_docs/4_add_clusters_cbg.md)
+Map cluster assignments from downsampled STALigner gridded data to cell segmentation data.
+
+### [Step 5: Merge all Clusters](./docs/domain_detection_docs/5_merge_clusters.md)
+Consolidate cluster assignments to full processed dataset.
+
 ## Quick Start
 
 1. **Prerequisites**: Ensure all required dependencies are installed
@@ -35,16 +55,8 @@ Save final processed results from the pipeline.
 4. **Output**: Each step generates intermediate files for the next step
 
 ## Pipeline Options:
-1. Pipeline with Domain Detection:(https://codeocean.allenneuraldynamics.org/capsule/5774767/tree)
-2. 
-## File Structure
-
-```
-
-```
-
-## Input/Output Flow
-
+1. Pipeline with Domain Detection: https://codeocean.allenneuraldynamics.org/capsule/5774767/tree
+2. Pipeline without Domain Detection: https://codeocean.allenneuraldynamics.org/capsule/2025724/tree
 
 ## Configuration
 
@@ -59,9 +71,7 @@ All pipeline parameters are centralized in `params.json`. Key parameter categori
 ## Usage Notes
 
 - Each step can be run independently if intermediate files are available
-- All steps save comprehensive metadata and QC metrics
-- Results are organized by section in the `results/sections/` directory
-- Each step adds specific annotation columns to track processing history
+- This workflow can be run on one or more sections.
 
 ## Dependencies
 

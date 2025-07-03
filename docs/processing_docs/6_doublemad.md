@@ -6,7 +6,7 @@ This module performs quality control on cell type mapping results using Double M
 The DoubleMAD quality control step includes:
 
 - Data Loading - Load mapped AnnData object and filter for QC-passed cells
-- DoubleMAD Calculation - Compute left and right MAD statistics for each supertype group
+- DoubleMAD Calculation - Compute left and right MAD statistics for each level
 - Threshold Setting - Set dynamic thresholds
 - Bimodal Detection - Identify supertypes with bimodal correlation distributions
 - Results Integration - Add threshold and criteria columns to cell metadata

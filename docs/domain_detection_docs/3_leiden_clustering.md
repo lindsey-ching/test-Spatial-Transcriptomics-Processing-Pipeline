@@ -38,7 +38,7 @@ The clustering parameters are specified in configuration files:
     },
     "metadata": {
         "specimen": "mouse",
-        "dataset_id": "749485"
+        "dataset_id": "720609"
     }
 
 **Resolution Parameters:**

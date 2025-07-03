@@ -7,9 +7,7 @@ This module aggregates individual section-level AnnData files into a single comb
 The combine sections step includes:
 
 - File Discovery - Locate all section-level h5ad files based on mapping type
-- Data Loading - Verify files exist and load individual section AnnData objects 
-- Data Concatenation - Combine multiple AnnData objects into single dataset
-- Output Generation - Save combined dataset with standardized naming convention
+- Data Concatenation - Combine multiple AnnData objects into single dataset and save
 
 ## Input Files
 
@@ -21,7 +19,7 @@ The combine sections step includes:
 - Ex: `mouse_638850_mmc_both_combined.h5ad`
 
 ## Configuration Parameters
-The combine sections function uses parameters from existing configuration file:
+The combine sections step uses parameters from existing configuration file:
 
     {
     "mapping_params": {

@@ -47,9 +47,14 @@ The DoubleMAD parameters are listed in `params.json`:
       "blanks_thr": 3
    }
 
-    "doublemad_params": {
-        "run_doublemad": "True",
-        "doublemad_multiplier": 3
+    "downsample_params": {
+         "grid_size": 30,
+         "bucket_name": "mfish-merscope-mouse-dev-802451596237-us-west-2",
+         "object_key_template": "merfish_output/{experiment_id}/region_{section_region}/detected_transcripts.csv",
+         "modality": "merscope",
+         "genes_thr": 60,
+         "transcripts_thr": 300,
+         "blanks_thr": 3
     }
     
 ### Parameter Descriptions

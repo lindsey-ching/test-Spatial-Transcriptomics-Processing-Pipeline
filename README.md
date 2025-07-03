@@ -49,10 +49,9 @@ Consolidate cluster assignments to full processed dataset.
 
 ## Quick Start
 
-1. **Prerequisites**: Ensure all required dependencies are installed
-2. **Configuration**: Update App Panel or `params.json` with your parameters
-3. **Execution**: Click Run With Parameters to run each step sequentially 
-4. **Output**: Each step generates intermediate files for the next step
+1. **Configuration**: Update App Panel or `params.json` with your parameters
+2. **Execution**: Click Run with parameters to run each step sequentially 
+3. **Output**: Each step generates intermediate files for the next step
 
 ## Pipeline Options:
 1. Pipeline with Domain Detection: https://codeocean.allenneuraldynamics.org/capsule/5774767/tree

@@ -50,8 +50,8 @@ Consolidate cluster assignments to full processed dataset.
 ## Quick Start
 
 1. **Prerequisites**: Ensure all required dependencies are installed
-2. **Configuration**: Update `params.json` with your specific parameters
-3. **Execution**: Run steps sequentially, starting with Step 1
+2. **Configuration**: Update App Panel or `params.json` with your parameters
+3. **Execution**: Click Run With Parameters to run each step sequentially 
 4. **Output**: Each step generates intermediate files for the next step
 
 ## Pipeline Options:
@@ -75,14 +75,6 @@ All pipeline parameters are centralized in `params.json`. Key parameter categori
 
 ## Dependencies
 
-- Python 3.8+
-- scanpy
-- anndata
-- pandas
-- numpy
-- scipy
-- SOLO (for doublet detection)
-- Additional dependencies listed in individual step documentation
 
 ## Support
 

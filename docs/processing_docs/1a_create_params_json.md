@@ -59,29 +59,29 @@ This module creates a JSON parameter file for the spatial transcriptomics proces
 ### Downsample Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `grid_size` | int | Grid size for downsampling |
-| `bucket_name` | str | S3 bucket name for data storage |
-| `object_key_template` | str | Template for S3 object key naming |
-| `modality` | str | Data modality type (e.g., xenium or merscope |
-| `genes_thr` | int | Threshold for downsampled gene filtering |
-| `transcripts_thr` | int | Threshold for donwsampled transcript filtering |
-| `blanks_thr` | int | Threshold for downsampled blanks filtering |
+| `--grid_size` | int | Grid size for downsampling |
+| `--bucket_name` | str | S3 bucket name for data storage |
+| `--object_key_template` | str | Template for S3 object key naming |
+| `--modality` | str | Data modality type (e.g., xenium or merscope |
+| `--genes_thr` | int | Threshold for downsampled gene filtering |
+| `--transcripts_thr` | int | Threshold for donwsampled transcript filtering |
+| `--blanks_thr` | int | Threshold for downsampled blanks filtering |
 
 ### STAligner Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `specimen` | str | Specimen type (e.g., mouse or human)|
-| `dataset_id` | str | Dataset ID |
-| `n_neighbors` | int | Number of neighbors for graph construction |
-| `reverse` | bool | Reverse orientation flag |
+| `--specimen` | str | Specimen type (e.g., mouse or human)|
+| `--dataset_id` | str | Dataset ID |
+| `--n_neighbors` | int | Number of neighbors for graph construction |
+| `--reverse` | bool | Reverse orientation flag |
 
 ### Cluster Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| `n_neighbors` | int | Number of neighbors for clustering |
-| `cluster_key` | str | Key for cluster identification |
-| `dataset_id` | str | Dataset ID |
-| `specimen` | str | Specimen type (e.g., mouse or human) |
+| `--n_neighbors` | int | Number of neighbors for clustering |
+| `--cluster_key` | str | Key for cluster identification |
+| `--dataset_id` | str | Dataset ID |
+| `--specimen` | str | Specimen type (e.g., mouse or human) |
 
 
 ## Output Files

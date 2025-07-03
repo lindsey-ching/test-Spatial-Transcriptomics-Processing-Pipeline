@@ -26,7 +26,6 @@ The save results step includes:
 ## Output Files
 
 - `whole_dataset/{specimen}_{dataset_id}_filtered.h5ad` - Complete filtered dataset
-- `whole_dataset/{specimen}_{dataset_id}_filtered.csv` - Observation metadata in CSV format
 - `sections/{section}_filtered.h5ad` - Individual section files
 
 ### Directory Structure:

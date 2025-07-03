@@ -1,19 +1,18 @@
 # Cell Type Mapping 
 ---
-This module performs hierarchical and/or flat cell type mapping using the MapMyCells to assign cell type annotations based on reference atlas data.
+This module performs hierarchical and/or flat cell type mapping using the MapMyCells algorithm to assign cell type annotations based on reference atlas data.
 
 ## Overview
 The mapping step includes:
 
-- Data Validation - Validate input AnnData format and structure
 - Gene Filtering - Optional removal of specified genes before mapping
-- Cell Type Mapping - Run flat and/or hierarchical mapping algorithms
+- Cell Type Mapping - Run hierarchical and/or flat mapping algorithms
 - Result Integration - Combine mapping results with original data
 - Output Generation - Save annotated data with cell type assignments
 
 ## Input Files
 
-- `*.h5ad` - Filtered AnnData file from previous processing steps (located in subdirectories of data directory)
+- `*.h5ad` - Filtered AnnData file from previous processing steps 
 - `*precomputed_stats*.h5` - Precomputed reference statistics file
 - `*marker*.json` - Serialized marker gene lookup table
 - `params.json` - Configuration file with mapping parameters
@@ -31,16 +30,15 @@ Both Mapping Mode (`both`):
 
 Intermediate Files:
 
-- `results/{mapping_acronym}_output/extended_results_{mapping_type}.json` - Detailed mapping results
-- `results/{mapping_acronym}_output/basic_results_{mapping_type}.csv` - Summary mapping results
+- `extended_results_{mapping_type}.json` - Detailed mapping results saved to results/{mapping_acronym}_output
+- `basic_results_{mapping_type}.csv` - Summary mapping results saved to results/{mapping_acronym}_output
 
 ### Added Metadata Columns:
 The mapping adds multiple columns to adata.obs with the format `{mapping_type}_{mapping_acronym}_{column}`:
-
-'hrc_mmc_class_label'
-'hrc_mmc_class_name'
-'hrc_mmc_class_bootstrapping_probability'
-'hrc_mmc_class_avg_correlation'
+- 'label' - MapMyCells labels
+- 'name' - Human-readable MapMyCells names
+- 'bootstrapping_probability' - 
+- 'avg_correlation' - 
 
 ## Configuration Parameters
 The mapping parameters are specified in mapping_params.json:
@@ -72,7 +70,7 @@ The mapping parameters are specified in mapping_params.json:
 
 - `drop_genes_list`: Optional comma-separated string of gene names to exclude from mapping
   - Format: "'Gene1','Gene2','Gene3'"
-  - Leave empty to skip gene filtering
+  - Leave empty to include all genes
   
 **Mapping Algorithm:**
 
@@ -88,7 +86,7 @@ The mapping parameters are specified in mapping_params.json:
 
 - `n_processors`: Number of CPU cores to use for parallel processing
 - `chunk_size`: Number of cells to process in each batch
-- `clobber`: Whether to overwrite existing output files (true/false)
+- `clobber`: Whether to overwrite existing output files ("True" or "False")
 
 
 

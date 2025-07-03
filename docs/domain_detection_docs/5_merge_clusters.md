@@ -9,7 +9,7 @@ This module consolidates cluster assignments to full processed dataset.
 
 ## Input Files
 - `*/whole_dataset/*{dataset_id}*.h5ad` - Original filtered whole dataset (from Save Results step)
-- `*/sections_{resolution}/*` - Section files with cluster annotations from previous pipeline steps
+- `*/sections_{resolution}/*` - Section files with cluster annotations from previous domain detection steps
 - `res_params/params_{resolution}.json` - JSON parameter files containing resolution values used for clustering
 - `params/params.json` - Configuration file
 
@@ -23,7 +23,6 @@ This module consolidates cluster assignments to full processed dataset.
   - Multiple columns added based on available resolution parameters
 - `AP_order` - Anatomical position ordering (integer values in ascending order)
   - Only added if not already present in the dataset
-  - Based on sorted section names in reverse order
 
 ## Configuration Parameters
 
@@ -32,7 +31,7 @@ From params/params.json:
     {
     "metadata": {
         "specimen": "mouse",
-        "dataset_id": "638850"}
+        "dataset_id": "720609"}
     }
 
 From res_params/{resolution}_params.json:

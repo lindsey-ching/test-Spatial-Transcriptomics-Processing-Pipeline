@@ -3,7 +3,7 @@ This module maps cluster assignments from downsampled STALigner gridded data to 
 
 ## Input Files
 - `*/*clustered.h5ad` - Downsampled STAligner dataset with spatial clustering results
-- `*/sections/*.h5ad` - Individual section datasets from cell segmentation pipeline
+- `*/sections/*.h5ad` - Individual section datasets from processing
 - `params.json` - Configuration file with grid_size parameter
 
 ## Output Files

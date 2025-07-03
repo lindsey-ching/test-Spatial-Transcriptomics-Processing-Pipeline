@@ -1,4 +1,4 @@
-# Spatial Transcriptomics Processing Pipeline
+# Spatial Transcriptomics Data Processing Pipeline
 ---
 This repository contains a comprehensive processing pipeline for spatial transcriptomics data analysis.
 

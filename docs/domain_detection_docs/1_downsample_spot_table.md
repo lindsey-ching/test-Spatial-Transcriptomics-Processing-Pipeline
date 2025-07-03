@@ -47,6 +47,11 @@ The DoubleMAD parameters are listed in `params.json`:
       "blanks_thr": 3
    }
 
+    "doublemad_params": {
+        "run_doublemad": "True",
+        "doublemad_multiplier": 3
+    }
+    
 ### Parameter Descriptions
 - `grid_size`: Grid cell size in micrometers
 - `bucket_name`: S3 bucket name containing transcript data

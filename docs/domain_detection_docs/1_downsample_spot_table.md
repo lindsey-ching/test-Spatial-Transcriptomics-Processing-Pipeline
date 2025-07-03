@@ -1,6 +1,6 @@
 # Downsample Spot Table
 ---
-This module spatially bins transcript spots into a  grid and performs QC filtering.
+This module bins transcript spots and performs QC filtering.
 
 ## Overview
 The downsample spot table step includes:

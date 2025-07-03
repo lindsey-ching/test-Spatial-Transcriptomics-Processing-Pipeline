@@ -58,6 +58,12 @@ Consolidate cluster assignments to full processed dataset.
 1. Pipeline with Domain Detection: https://codeocean.allenneuraldynamics.org/capsule/5774767/tree
 2. Pipeline without Domain Detection: https://codeocean.allenneuraldynamics.org/capsule/2025724/tree
 
+## Running the Pipeline
+
+- The pipeline can be executed directly within Code Ocean through the web interface or via the Code Ocean API. All dependencies are pre-installed in the containerized environment, eliminating setup complexity.
+- Each step can be run independently if intermediate files are available
+- This workflow can be run on one or more sections.
+  
 ## Configuration
 
 All pipeline parameters are centralized in `params.json`. Key parameter categories include:
@@ -67,11 +73,6 @@ All pipeline parameters are centralized in `params.json`. Key parameter categori
 - **DoubleMAD Parameters**: 
 - **Metadata Parameters**:
 - **Domain Detection Parameters**:
-
-## Usage Notes
-
-- Each step can be run independently if intermediate files are available
-- This workflow can be run on one or more sections.
 
 ## Dependencies
 

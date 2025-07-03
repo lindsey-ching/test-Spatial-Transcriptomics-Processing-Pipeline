@@ -1,6 +1,6 @@
 # Downsample Spot Table
 ---
-This module spatially bins MERFISH transcript spots into a  grid and performs QC filtering.
+This module spatially bins transcript spots into a  grid and performs QC filtering.
 
 ## Overview
 The downsample spot table step includes:

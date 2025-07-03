@@ -35,10 +35,22 @@ QC Filter Columns:
 - `qc_passed`: Boolean indicating if all QC filters passed
 
 ## Configuration Parameters
-The parameters are specified as command-line arguments:
-- `--grid_size`: Grid cell size in micrometers
-- `--bucket_name`: S3 bucket name containing transcript data
-- `--object_key_template`: S3 object key template to transcripts file
-- `--genes_thr`: Minimum number of genes required per grid
-- `--transcripts_thr`: Minimum total transcript count per grid
-- `--blanks_thr`: Maximum percentage of blanks per grid allowed
+The DoubleMAD parameters are listed in `params.json`:
+
+"downsample_params": {
+        "grid_size": 30,
+        "bucket_name": "mfish-xenium-meth-dev-and-pilot-802451596237-us-west-2",
+        "object_key_template": "{experiment_id}/transcripts.parquet",
+        "modality": "xenium",
+        "genes_thr": 60,
+        "transcripts_thr": 300,
+        "blanks_thr": 3
+    }
+
+### Parameter Descriptions
+- `grid_size`: Grid cell size in micrometers
+- `bucket_name`: S3 bucket name containing transcript data
+- `object_key_template`: S3 object key template to transcripts file
+- `genes_thr`: Minimum number of genes required per grid
+- `transcripts_thr`: Minimum total transcript count per grid
+- `blanks_thr`: Maximum percentage of blanks per grid allowed
